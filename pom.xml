@@ -17,7 +17,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <exec.mainClass>
-      edu.eci.cvds.patterns.archetype.App
+      edu.eci.cvds.patterns.shapes.ShapeMain
     </exec.mainClass>
   </properties>
 
@@ -57,7 +57,7 @@
           <configuration>
             <archive>
                 <manifestEntries>
-                    <Main-Class>edu.eci.cvds.patterns.archetype.App</Main-Class>
+                    <Main-Class>edu.eci.cvds.patterns.shapes.ShapeMain</Main-Class>
                 </manifestEntries>
             </archive>
           </configuration>
