@@ -16,6 +16,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <exec.mainClass>
+      edu.eci.cvds.patterns.archetype.App
+    </exec.mainClass>
   </properties>
 
   <dependencies>
@@ -75,6 +78,30 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.4.1</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>exec</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <executable>maven</executable>
+            <!-- optional -->
+            <workingDirectory>/tmp</workingDirectory>
+            <arguments>
+              <argument>-X</argument>
+              <argument>myproject:dist</argument>
+            </arguments>
+            <environmentVariables>
+              <LANG>en_US</LANG>
+            </environmentVariables>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
